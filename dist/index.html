@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Isaksen Tech</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
 
@@ -16,12 +19,104 @@
         <img class="construction__image" src="img/construction.svg" alt="">
     </div>
 
-    <!-- <div id="app"></div>
+    <div id="app"></div>
+    
+
+<script type="text/babel">
+    
+    class App extends React.Component{
+        render() {
+            return(
+                <div>
+                    <h1>Hey man</h1>
+                </div>
+            )
+        }
+    }
 
 
 
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
+
+    ReactDOM.render(<App />, document.getElementById("app"))
+</script>
+
+
+
+<style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    }
+    .gwd-path-jkfz {
+      position: absolute;
+      stroke: rgb(0, 0, 0);
+      stroke-width: 1px;
+      fill: rgb(192, 37, 37);
+      transform-style: preserve-3d;
+      pointer-events: auto;
+      transform: rotateZ(0deg);
+      width: 197.557px;
+      height: 199.559px;
+      left: 225.025px;
+      top: 313.99px;
+    }
+    .htmlNoPages .gwd-gen-qu5pgwdanimation {
+      animation: gwd-gen-qu5pgwdanimation_gwd-keyframes 0.7s linear 0s 1 normal forwards running;
+    }
+    @keyframes gwd-gen-qu5pgwdanimation_gwd-keyframes {
+      0% {
+        transform: rotateZ(0deg) scale3d(1, 1, 1);
+        animation-timing-function: cubic-bezier(0.115, 0.955, 0.815, -0.025);
+      }
+      57.1429% {
+        transform: rotateZ(88.2118deg) scale3d(1, 1, 1);
+        animation-timing-function: linear;
+      }
+      100% {
+        transform: rotateZ(88.2118deg) scale3d(1, 0.63031, 1);
+        animation-timing-function: linear;
+      }
+    }
+
+
+</style>
+<link rel="stylesheet" href="gwd/test_motion_paths.css">
+<script type="text/javascript" src="gwd/motionpath_runtime.min.1.0.js" gwd-motionpath-version="1.0"></script>
+
+<div class="animation-container">
+
+    <div class="htmlNoPages" style="">
+            <svg data-gwd-shape="path" preserveAspectRatio="none" viewBox="0 0 197.557 199.559" class="gwd-path-jkfz gwd-gen-qu5pgwdanimation" data-gwd-motion-path-key="gwd-motion-path-ln1c">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M 81.146,0.5 C 80.156,-0.463 201.488,75.506 197.057,139.316 196.995,140.215 196.925,141.099 196.848,141.968 191.566,201.397 152.342,190.563 141.652,186.48 140.008,185.852 139.066,185.391 139.066,185.391 139.066,185.391 126.208,70.991 44.207,196.967 -72.793,222.987 82.136,1.463 81.146,0.5"></path>
+            </svg>
+        </div>
+        
+</div>
+
+<style>
+
+.animation-container {
+    max-width: 1400px;
+    height: 500px;
+    overflow:hidden;
+    position: relative;
+    /* background: #000; */
+}
+
+.htmlNoPages{
+    transform: translate(-150px, -240px);
+}
+
+</style>
+
+
+
     <!-- Load our React component. -->
     <!-- <script src="app.js"></script> -->
 </body>
