@@ -4,70 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Isaksen Tech</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <title>Skryte side</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ruda&display=swap"
+     rel="stylesheet">
 </head>
 <body>
-
-
-    <div id="app"></div>
-    
-
-<script type="text/babel" src="app.js"></script>
-
-
-
-<style type="text/css">
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-    }
-    body {
-      background-color: transparent;
-      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      transform-style: preserve-3d;
-    }
-    .gwd-path-jkfz {
-      position: absolute;
-      stroke: rgb(0, 0, 0);
-      stroke-width: 1px;
-      fill: rgb(192, 37, 37);
-      transform-style: preserve-3d;
-      pointer-events: auto;
-      transform: rotateZ(0deg);
-      width: 197.557px;
-      height: 199.559px;
-      left: 225.025px;
-      top: 313.99px;
-    }
-    .htmlNoPages .gwd-gen-qu5pgwdanimation {
-      animation: gwd-gen-qu5pgwdanimation_gwd-keyframes 0.7s linear 0s 1 normal forwards running;
-    }
-    @keyframes gwd-gen-qu5pgwdanimation_gwd-keyframes {
-      0% {
-        transform: rotateZ(0deg) scale3d(1, 1, 1);
-        animation-timing-function: cubic-bezier(0.115, 0.955, 0.815, -0.025);
-      }
-      57.1429% {
-        transform: rotateZ(88.2118deg) scale3d(1, 1, 1);
-        animation-timing-function: linear;
-      }
-      100% {
-        transform: rotateZ(88.2118deg) scale3d(1, 0.63031, 1);
-        animation-timing-function: linear;
-      }
-    }
-
-
-</style>
-
-
-    <!-- Load our React component. -->
-    <!-- <script src="app.js"></script> -->
+    <div class="main-container">
+        <header class="header">
+            <div class="header__top-quote top-quote__container">
+                <img src="index/img/header/happy-me.png" alt="" class="top-quote__image">
+                <img src="index/img/header/talk-line.svg" alt="" class="top-quote__talk-line">
+                <p class="top-quote__text">
+                        “Velkommen til min fantastiske skryte side"
+                </p>
+            </div>
+            <nav class="header__top-nav top-nav__container">
+                <ul class="top-nav__list">
+                    <li class="top-nav__list-item top-nav__list-item--active">
+                        <a href="#" class="top-nav__list-item-link-area">
+                            <img src="index/img/header/invader-ide.svg" alt="" class="top-nav__list-item-graphic">
+                            <p class="top-nav__list-item-text top-nav__list-item-text--home">Hjem</p>
+                        </a>
+                    </li>
+                    <li class="top-nav__list-item">
+                        <a href="#skils__anchor-tag" class="top-nav__list-item-link-area">
+                            <img src="index/img/header/creating-computer.svg" alt="" class="top-nav__list-item-graphic">
+                            <p class="top-nav__list-item-text top-nav__list-item-text--skils">Skils</p>
+                        </a>
+                    </li>
+                    <li class="top-nav__list-item">
+                        <a href="#portfolio__anchor-tag" class="top-nav__list-item-link-area">
+                            <img src="index/img/header/finsihed-mobile-app.svg" alt="" class="top-nav__list-item-graphic">
+                            <p class="top-nav__list-item-text top-nav__list-item-text--portfolio">Portfolio</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <img src="index/img/header/earth.svg" alt="" class="header__earth">
+        </header>
+        <section class="about-me__container">
+            <div class="about-me__text-container">
+                <h1 class="about-me__text-header">KORT OM MEG</h1>
+                <p class="about-me__text-paragraph">
+                    Jeg er en profesjonel problemerløser. 
+                    Jeg har en kjærlighet til form, funksjonalitet og historie fortelling. 
+                    Alt dette blir vanligvis kombinert i interaktive opplevelser som spill, film, websider og apps.
+                    Ellers er jeg en ganske sports og musikk glad person som altid setter pris på opplevelser med gode venner
+                </p>
+            </div>
+            <div class="about-me__bg-container">
+                <div class="about-me__bg-bar-container">
+                    <img src="index/img/about-me/about-me__left-graphics.svg" alt="" class="about-me__bg-left-grphics">
+                    <div class="about-me__bg-right-bar"></div>
+                </div>
+                <img src="index/img/about-me/about-me__left-bend.svg" alt="" class="about-me__bg-bend">
+            </div>
+        </section>
+        <div class="anchor-tag-container">
+            <div id="skils__anchor-tag"></div>
+        </div>
+        <section class="skils skils__container">
+            <div class="skils__left-container">
+                <h1 class="skils__left-education-header">Formel Utdaning</h1>
+                <div class="education-item__container">
+                    <h3 class="education-item__header">Frontend-utvikling</h3>
+                    <h6 class="education-item__year">(2017-2019)</h6>
+                    <h5 class="education-item__byline">Fagskole</h5>
+                    <h4 class="education-item__school-name">Noroff</h4>
+                </div>
+                <div class="education-item__container">
+                    <h3 class="education-item__header">IT BACHLOR</h3>
+                    <h6 class="education-item__year">(2013-2016)</h6>
+                    <h5 class="education-item__byline">med fordypning i spill design</h5>
+                    <h4 class="education-item__school-name">Westerdals ACT (NITH)</h4>
+                </div>
+                <div class="skils__language-container">
+                    <div class="skils__language-header-container">
+                        <h2 class="skils__language-header">Språk</h2>
+                        <img src="index/img/skils/speach-bubble.svg" alt="" class="skils__language-graphic">
+                    </div>
+                    <p class="skils__language-paragraph">
+                        Jeg har norsk og engelsk som morsmål, og fordi jeg bodde et og et halvt år i Puerto Rico så snakker jeg spansk. Riktig nok med en smule karibiansk/norsk agsang  
+                    </p>
+                </div>
+            </div>
+            <div class="skils__right-container">
+                <div class="digital-skils__container">
+                    <div class="digital-skil-item__container">
+                        <h2 class="digital-skil-item__header">Software Erfaring</h2>
+                        <p class="digital-skil-item__paragraph digital-skil-item__paragraph--software">
+                            Godot, Unity3D, Unreal, Adobe Grafikk og film pakkene, Hitfilm, Blender3D, 3Dsmax, Audacity, MS Office pakkene, Linux, 
+                            Windows, MacOS, Figma, LAMP
+                        </p>
+                    </div>
+                    <div class="digital-skil-item__container">
+                        <h2 class="digital-skil-item__header">UTVIKLER Språk</h2>
+                        <p class="digital-skil-item__paragraph digital-skil-item__paragraph--dev-languages">
+                            JS, HTML, CSS, PHP, Java, C#, Python, GDScript.
+                        </p>
+                    </div>
+                    <div class="digital-skil-item__container">
+                        <h2 class="digital-skil-item__header">Rameverk</h2>
+                        <p class="digital-skil-item__paragraph digital-skil-item__paragraph--framework">
+                                Wordpress, React, Vue, NativeScript, 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="anchor-tag-container">
+            <div id="portfolio__anchor-tag"></div>
+        </div>
+        <section class="portfolio__contianer">
+            <img src="index/img/porfolio/portfolio-up-bend.svg" alt="" class="portfolio__up-bend">
+            <div class="portfolio__content-contianer">
+                <h1 class="portfolio__header">Portfolio</h1>
+                <div class="portfolio__item-container">
+                    <a href="https://naitsmania.no/" target="_blank" class="portfolio__item">
+                        <img src="index/img/porfolio/website-mini-img-naitsmania.jpg" alt="" class="portfolio__item-image">
+                        <div class="portfolio__item-name">Naitsmania.no</div>
+                    </a>
+                    <a href="https://hybridkraft.com/" target="_blank" class="portfolio__item">
+                        <img src="index/img/porfolio/website-mini-img-hybridkraft.jpg" alt="" class="portfolio__item-image">
+                        <div class="portfolio__item-name">Hybridkraft.com</div>
+                    </a>
+                    <a href="http://hip2thebone.com/" target="_blank" class="portfolio__item">
+                        <img src="index/img/porfolio/website-mini-img-hi2thebone.jpg" alt="" class="portfolio__item-image">
+                        <div class="portfolio__item-name">Hip2thebone.com</div>
+                    </a>
+                    <a href="https://stanm-dd7e0.firebaseapp.com/#/" target="_blank" class="portfolio__item">
+                        <img src="index/img/porfolio/website-mini-img-magnify.jpg" alt="" class="portfolio__item-image">
+                        <div class="portfolio__item-name">Magnify</div>
+                    </a>
+                    <a href="http://188.226.145.95/semester3/semester-project/Game-of-Thrones-Board-Game/" target="_blank" class="portfolio__item">
+                        <img src="index/img/porfolio/website-mini-img-got-game.jpg" alt="" class="portfolio__item-image">
+                        <div class="portfolio__item-name">GOT board game</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="contact__container">
+            <div class="contact__content-container">
+                <h1 class="contact__header">Takk for besøket</h1>
+                <div class="contact__paragraph">
+                    Referanser og videre kontakt informasjon gis etter forespørsel. <br>
+                    Om du har spørsmål eller forspørsller ikke nøll med å send meg en mail
+                </div>
+                <a href="mailto:jared.anders87@gmail.com" class="contact__button">
+                    Ta KOntakt
+                </a>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

@@ -2,9 +2,20 @@
 class App extends React.Component{
     render() {
         return(
-            <div>
+            <div className="main-container">
                 <h1>Hey man</h1>
-                <Construction />
+                {/* <Construction /> */}
+            </div>
+        )
+    }
+}
+
+
+class Header extends React.Component{
+    render() {
+        return (
+            <div className="header">
+                
             </div>
         )
     }
