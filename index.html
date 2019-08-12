@@ -4,23 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skryte side</title>
+    <title>Isaksen Tech</title>
+    <link rel="icon" 
+      type="image/png" 
+      href="img/speach-bubble.png">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="index/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Ruda&display=swap"
      rel="stylesheet">
 </head>
 <body>
+
+    <a id="toTopBtn" href="#top__anchor-tag" class="back-to-top__container hidden">
+        <img src="img/back-to-top-graphic.svg" alt="" class="back-to-top__graphic">
+    </a>
+
+<script>
+
+let toTopBtn = document.getElementById("toTopBtn")
+showHideToTopBtn()
+
+
+window.addEventListener("scroll", e => {
+    showHideToTopBtn()
+    // console.log("hiden",window.scrollY)
+})
+
+function showHideToTopBtn(){
+    if(window.scrollY < 40){
+        if(!toTopBtn.classList.contains("hidden")){
+            toTopBtn.classList.add("hidden")
+        }
+    }else{
+        toTopBtn.classList.remove("hidden")
+    }
+}
+
+
+</script>
+
+    <div class="anchor-tag-container">
+        <div id="top__anchor-tag"></div>
+    </div>
+
     <div class="main-container">
         <header class="header">
             <div class="header__top-quote top-quote__container">
                 <img src="index/img/header/happy-me.png" alt="" class="top-quote__image">
                 <img src="index/img/header/talk-line.svg" alt="" class="top-quote__talk-line">
                 <p class="top-quote__text">
-                        “Velkommen til min fantastiske skryte side"
+                        “Velkommen til min personlige skryte side"
                 </p>
             </div>
-            <nav class="header__top-nav top-nav__container">
+            <nav class="header__top-nav-hamburger top-nav-hamburger__container">
+                <a href="" class="top-nav-hamburger__anchor" id="hamburgerAchor">
+                    <img src="img/hamburger.svg" alt="" class="top-nav-hamburger__graphic">
+                </a>
+            </nav>           
+
+            <nav class="header__top-nav top-nav__container" id="topNav">
                 <ul class="top-nav__list">
                     <li class="top-nav__list-item top-nav__list-item--active">
                         <a href="#" class="top-nav__list-item-link-area">
@@ -43,6 +85,29 @@
                 </ul>
             </nav>
             <img src="index/img/header/earth.svg" alt="" class="header__earth">
+<script>
+
+let hamburgerAchor = document.getElementById('hamburgerAchor')
+let topNav = document.getElementById('topNav')
+
+hamburgerAchor.addEventListener('click', e => {
+    e.preventDefault()
+    topNav.classList.toggle('top-nav__container--active')
+    hamburgerAchor.classList.toggle('top-nav-hamburger__graphic--active')
+})
+
+let navAchors = document.querySelectorAll('.top-nav__list-item-link-area')
+
+navAchors.forEach(nav => {  
+    nav.addEventListener('click', e => {
+        topNav.classList.toggle('top-nav__container--active')
+        hamburgerAchor.classList.toggle('top-nav-hamburger__graphic--active')
+        console.log("test")
+    })
+})
+        
+</script> 
+
         </header>
         <section class="about-me__container">
             <div class="about-me__text-container">
@@ -121,27 +186,29 @@
             <img src="index/img/porfolio/portfolio-up-bend.svg" alt="" class="portfolio__up-bend">
             <div class="portfolio__content-contianer">
                 <h1 class="portfolio__header">Portfolio</h1>
-                <div class="portfolio__item-container">
-                    <a href="https://naitsmania.no/" target="_blank" class="portfolio__item">
-                        <img src="index/img/porfolio/website-mini-img-naitsmania.jpg" alt="" class="portfolio__item-image">
-                        <div class="portfolio__item-name">Naitsmania.no</div>
-                    </a>
-                    <a href="https://hybridkraft.com/" target="_blank" class="portfolio__item">
-                        <img src="index/img/porfolio/website-mini-img-hybridkraft.jpg" alt="" class="portfolio__item-image">
-                        <div class="portfolio__item-name">Hybridkraft.com</div>
-                    </a>
-                    <a href="http://hip2thebone.com/" target="_blank" class="portfolio__item">
-                        <img src="index/img/porfolio/website-mini-img-hi2thebone.jpg" alt="" class="portfolio__item-image">
-                        <div class="portfolio__item-name">Hip2thebone.com</div>
-                    </a>
-                    <a href="https://stanm-dd7e0.firebaseapp.com/#/" target="_blank" class="portfolio__item">
-                        <img src="index/img/porfolio/website-mini-img-magnify.jpg" alt="" class="portfolio__item-image">
-                        <div class="portfolio__item-name">Magnify</div>
-                    </a>
-                    <a href="http://188.226.145.95/semester3/semester-project/Game-of-Thrones-Board-Game/" target="_blank" class="portfolio__item">
-                        <img src="index/img/porfolio/website-mini-img-got-game.jpg" alt="" class="portfolio__item-image">
-                        <div class="portfolio__item-name">GOT board game</div>
-                    </a>
+                <div class="portfolio__item-container-background">
+                    <div class="portfolio__item-container">
+                        <a href="https://naitsmania.no/" target="_blank" class="portfolio__item">
+                            <img src="index/img/porfolio/website-mini-img-naitsmania.jpg" alt="" class="portfolio__item-image">
+                            <div class="portfolio__item-name">Naitsmania.no</div>
+                        </a>
+                        <a href="https://hybridkraft.com/" target="_blank" class="portfolio__item">
+                            <img src="index/img/porfolio/website-mini-img-hybridkraft.jpg" alt="" class="portfolio__item-image">
+                            <div class="portfolio__item-name">Hybridkraft.com</div>
+                        </a>
+                        <a href="http://hip2thebone.com/" target="_blank" class="portfolio__item">
+                            <img src="index/img/porfolio/website-mini-img-hi2thebone.jpg" alt="" class="portfolio__item-image">
+                            <div class="portfolio__item-name">Hip2thebone.com</div>
+                        </a>
+                        <a href="https://stanm-dd7e0.firebaseapp.com/#/" target="_blank" class="portfolio__item">
+                            <img src="index/img/porfolio/website-mini-img-magnify.jpg" alt="" class="portfolio__item-image">
+                            <div class="portfolio__item-name">Magnify</div>
+                        </a>
+                        <a href="http://188.226.145.95/semester3/semester-project/Game-of-Thrones-Board-Game/" target="_blank" class="portfolio__item">
+                            <img src="index/img/porfolio/website-mini-img-got-game.jpg" alt="" class="portfolio__item-image">
+                            <div class="portfolio__item-name">GOT board game</div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
